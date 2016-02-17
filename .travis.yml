@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  "4.0"
+compiler: clang-3.6
+env:
+  global:
+    - CXX: clang-3.6
+    - GH_DEPLOYER: RussTheAerialist
+    - GH_REPO: github.com/russtheaerialist/nodebotsea-website.git
+    - secure: "ERK/VH2XQMxc//948EJYlpFZJ22MsReFLMsdrXxK/gqeciayLEYg+gIykAuhpY5yt8HFTrLcJDBv2rbWE8LWIpoKrzzAd/HQnI3K+QQBqFfiG01uSUgNpao13WrbIJ2sbhTXmZnXkXZCjpTAdTuQc/BJSIztWVaLtLEYhqYa4pRDntqXkQ3Z9gYsR26DfC1emJapqvFHzRJqk/RNJvItu4EYbKXP/OWdO5Iy6AtW0OWw31l7MoUPFD9raWg0/OTn52wiyVdog+emvKHn5UfGLMoQCA9ntfWOH1hx65WJ4A4VXj69CiexW+CxjDcKuJg0p7ZylluGYtOUqX1mT7VXRgU1hbDqQOwK3yS/BNA9dmEkqMINLONxa6lUDM6Xp9vkgO2IdyQ74vByI6/i2T9H1e2Uf+S7KHa64xjHfJFYE0h3mXDODzQtz7CPTNS7wS1m6qwYrx7XRgfqaO6fyTWbIN8OYKsszXoJ3tNCxwNqYcJd3FYYtCp9UemTlqkZoMvXhkvTw0VTJQB4TuecUc/OhmMKMzKSIw3ykoWhNpfrpqUD4kMSu2qzawAKzaw/WRRLRH0vxrWyuujIwvo8V4xUNeJfPUqIK1m3lylfBX8m+rRCYmRU58PjaOb8J/ZfaHFTskFRislN4tRdGMXWUlI4wnuBog+po0LkG+tPB2uYGDk="
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.6
+      - ubuntu-toolchain-r-test
+    packages:
+      - clang-3.6
+      - g++-4.8
+before_install:
+  - gem install sass
+after_success:
+  - ./.travis/deploy.sh
