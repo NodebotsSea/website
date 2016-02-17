@@ -6,7 +6,7 @@ Watch the site above or [https://twitter.com/nodebotssea](https://twitter.com/no
 
 ### Developing the site
 
-[![Build Status](https://travis-ci.org/RussTheAerialist/nodebotsea-website.svg?branch=development)](https://travis-ci.org/RussTheAerialist/nodebotsea-website)
+[![Build Status](https://travis-ci.org/NodebotsSea/website.svg?branch=master)](https://travis-ci.org/NodebotsSea/website)
 
 It's a wintersmith website, so 
 
