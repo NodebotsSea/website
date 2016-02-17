@@ -1,22 +1,21 @@
 language: node_js
-node_js:
-  "4.0"
+node_js: '4.0'
 compiler: clang-3.6
 env:
   global:
-    - CXX: clang-3.6
-    - GH_DEPLOYER: RussTheAerialist
-    - GH_REPO: github.com/russtheaerialist/nodebotsea-website.git
-    - secure: "ERK/VH2XQMxc//948EJYlpFZJ22MsReFLMsdrXxK/gqeciayLEYg+gIykAuhpY5yt8HFTrLcJDBv2rbWE8LWIpoKrzzAd/HQnI3K+QQBqFfiG01uSUgNpao13WrbIJ2sbhTXmZnXkXZCjpTAdTuQc/BJSIztWVaLtLEYhqYa4pRDntqXkQ3Z9gYsR26DfC1emJapqvFHzRJqk/RNJvItu4EYbKXP/OWdO5Iy6AtW0OWw31l7MoUPFD9raWg0/OTn52wiyVdog+emvKHn5UfGLMoQCA9ntfWOH1hx65WJ4A4VXj69CiexW+CxjDcKuJg0p7ZylluGYtOUqX1mT7VXRgU1hbDqQOwK3yS/BNA9dmEkqMINLONxa6lUDM6Xp9vkgO2IdyQ74vByI6/i2T9H1e2Uf+S7KHa64xjHfJFYE0h3mXDODzQtz7CPTNS7wS1m6qwYrx7XRgfqaO6fyTWbIN8OYKsszXoJ3tNCxwNqYcJd3FYYtCp9UemTlqkZoMvXhkvTw0VTJQB4TuecUc/OhmMKMzKSIw3ykoWhNpfrpqUD4kMSu2qzawAKzaw/WRRLRH0vxrWyuujIwvo8V4xUNeJfPUqIK1m3lylfBX8m+rRCYmRU58PjaOb8J/ZfaHFTskFRislN4tRdGMXWUlI4wnuBog+po0LkG+tPB2uYGDk="
+  - CXX: clang-3.6
+  - GH_DEPLOYER: RussTheAerialist
+  - GH_REPO: github.com/nodebotsea/website.git
+  - secure: kauvihFlqZY6Tf4jRdNyNDEugxD7htJX7jqnga21k2pl/+y/ksxVkpzbDcg99AsimwsiNJ6mQ7o8dQall5GjyyE7cef/wHqM1Q6457uwnuleLXjaNUmX8yWSxzjLzTJ+L6oFJBEJ3aGQnvaOEpovf9ijh3gquw94X0h46THhAugQC5vaRAtOLOGhZpk/TWWGOzTvBUdQkKwn/Wvz8/rFduSkZ5IeMMyeW6XWPJApHaFnsLz1TiEqjnVM3beWcEGRB783O52RIR1PbePFn4aPTESV8VJwB1PmS4fe8NOH0VRD1l/CiMgTgSXvR1KXMvbvgM0LF5rY8qqCGvQB0k4HcAYwUcDR0GgqN25LAEssPcD6Z44gsdhHntmdGQKjVhsS33iLqcax0n10T0ijuLBIut7TCw2UTQ7FipTRIyOwqrVwmQU5R2KmikakeZNGZCgXdCutyxJvG4njPMq7DnYRAm32U0wJppqz9h093b49Z+iAXUOp5QMMnCL/6ZFJGp8sRqCU+ITxCqJkHXMzqNTS+b/C+BHHgZya9/e7h2W1U8yVoNIc7afA/iKV7IiprxEyxnxcGBaDYB6WOH0MpexAAxi9TAsCz4pEwRvVKG1ieSn0sAED/VLQJqwo8bwVpkDr60dOvpioecSuzgYVWpjfywXWgapiHGMuS17nHMxHmAE=
 addons:
   apt:
     sources:
-      - llvm-toolchain-precise-3.6
-      - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise-3.6
+    - ubuntu-toolchain-r-test
     packages:
-      - clang-3.6
-      - g++-4.8
+    - clang-3.6
+    - g++-4.8
 before_install:
-  - gem install sass
+- gem install sass
 after_success:
-  - ./.travis/deploy.sh
+- "./.travis/deploy.sh"
